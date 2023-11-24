@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="bg-indigo-500 shadow">
+            <div class="max-w-7xl mx-auto px-4 py-6">
+              <div class="flex items-center justify-between">
+                <img class="h-10" src="logo.jpg" alt="logo">
+                <ul class="flex space-x-4">
+                  <li><a href="login.html" class="hover:text-gray-900 text-white">Login</a></li>
+                  <li><a href="index.html" class="hover:text-gray-900 text-white">Home</a></li>
+                  <li><a href="about.html" class="hover:text-gray-900 text-white">About</a></li>
+                  <li><a href="contact.html" class="hover:text-gray-900 text-white">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+  <section class="contact-us bg-gray-100">
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-x-6 lg:grid-cols-2">
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-900">Get in touch</h2>
+          <p class="mt-2 text-gray-700">We'd love to hear from you. Send us a message or give us a call.</p>
+          <ul class="mt-4 flex flex-col space-y-2">
+            <li><span class="font-semibold text-gray-700">Email:</span> <a href="mailto:info@example.com" class="text-gray-500 hover:text-gray-700">Serenity@hotel.com</a></li>
+            <li><span class="font-semibold text-gray-700">Phone:</span> <a href="tel:+1234567890" class="text-gray-500 hover:text-gray-700">+1 234-567-890</a></li>
+          </ul>
+        </div>
+        <form class="mt-4">
+          <label class="block">
+            <span class="text-gray-700">Your name</span>
+            <input type="text" class="form-input mt-1 block w-full rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none" placeholder="Your name">
+          </label>
+          <label class="block mt-4">
+            <span class="text-gray-700">Your email address</span>
+            <input type="email" class="form-input mt-1 block w-full rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none" placeholder="Your email address">
+          </label>
+          <label class="block mt-4">
+            <span class="text-gray-700">Your message</span>
+            <textarea class="form-textarea mt-1 block w-full rounded-md shadow-sm focus:ring-indigo-500 focus:outline-none" rows="3" placeholder="Your message"></textarea>
+          </label>
+          <button type="submit" class="mt-4 w-full rounded-md bg-indigo-600 text-white font-medium shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-indigo-500">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

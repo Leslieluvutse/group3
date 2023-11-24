@@ -4,37 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel Booking Form</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <form class="form-horizontal" role="form" method="POST" action="/book">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center">Book Your Stay</h1>
 
-        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-            <label for="name" class="col-md-4 control-label">Name</label>
+        <form action="#" method="post" class="mt-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col">
+                    <label for="name" class="text-gray-700">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="mt-1 p-2 border rounded focus:outline-none focus:border-gray-500">
+                </div>
 
-            <div class="col-md-6">
-                <input id="name" type="text" class="form-control" name="name" value="enter name" required>
-            </div>
-
-            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                <div class="col-md-6">
-                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-                    <span class="help-block">
-                                            <strong>{{ $errors->first('email') }}</strong>
-                                        </span>
+                <div class="flex flex-col">
+                    <label for="email" class="text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com" class="mt-1 p-2 border rounded focus:outline-none focus:border-gray-500">
                 </div>
             </div>
 
-            <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                <label for="phone" class="col-md-4 control-label">Phone Number</label>
+            <div class="flex flex-col mt-4">
+                <label for="phone" class="text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1234567890" class="mt-1 p-2 border rounded focus:outline-none focus:border-gray-500">
+            </div>
 
-                <div class="col-md-6">
-                    <input id="phone" type="text" class="form-control
-                                    " name="phone" value="{{ old('phone') }}" required autofocus>
+            <hr class="mt-4">
 
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col">
+                    <label for="checkIn" class="text-gray-700">Check-In Date</label>
+                    <input type="date" id="checkIn" name="checkIn" class="mt-1 p-2 border rounded focus:outline-none focus:border-gray-500">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="checkOut" class="text-gray-700">Check-Out Date</label>
+                    <input type="date" id="checkOut" name="checkOut" class="mt-1 p-2 border rounded focus:outline-none focus:border-gray-500">
+                </div>
+            </div>
+
+            <div class="flex flex-col mt-4">
+                <label for="roomType" class="text-gray-700">Room Type</label>
+                <select name="roomType" id="roomType" class="mt-1 p-2 border rounded focus:outline-none focus:border-gray-500">
+                <option value="standard">Standard Room</option>
+                <option value="deluxe">Deluxe Room</option>
+                <option value="suite">Suite</option>
+            </select>
+            </div>
+
+            <div class="flex flex-col mt-4">
+                <label for="adults" class="text-gray-700">Number of Adults</label>
+                <input type="number" id="adults" name="adults" min="1" max="10" value="1" class="mt-1 p-2 border rounded focus:outline-none focus:border-gray-500">
+            </div>
+
+            <div class="flex flex-col mt-4">
+                <label for="children" class="text-gray-700">Number of Children</label>
+                <input type="number" id="children" name="children" min="0" max="10" value="0" class="mt-1 p-2 border rounded focus:outline-none focus:border-gray-500">
+            </div>
+
+            <div class="flex flex-col mt-4">
+                <label for="specialRequest" class="text-gray-700">Special Requests</label>
+            </div>
 
 </body>
 
